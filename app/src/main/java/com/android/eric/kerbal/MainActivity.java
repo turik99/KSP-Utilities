@@ -1,5 +1,6 @@
 package com.android.eric.kerbal;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -11,13 +12,13 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     ListView list;
     String[] itemname ={
-
+            "Delta V Calculator",
             "Parachute Calculator",
             "Celestial Body Info"
     };
 
     Integer[] imgid={
-
+            R.drawable.dvcalc,
             R.drawable.paracalc,
             R.drawable.celestinfo
 
@@ -37,8 +38,10 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 // TODO Auto-generated method stub
-                String Slecteditem= itemname[+position];
-                Toast.makeText(getApplicationContext(), Slecteditem, Toast.LENGTH_SHORT).show();
+                if (position == 0){
+                    Intent intent = new Intent(getApplicationContext(), deltacalc.class);
+                    startActivity(intent);
+                }
 
             }
         });

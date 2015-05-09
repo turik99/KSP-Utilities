@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import javax.xml.datatype.Duration;
+
 
 public class deltacalc extends AppCompatActivity {
 
@@ -27,17 +29,16 @@ public class deltacalc extends AppCompatActivity {
             double isp = Double.valueOf(ispedit.getText().toString());
             double answer = Math.log(fullmass / drymass * isp * 9.81);
 
-            Toast toast = new Toast(this);
-            toast.setText(String.valueOf(answer));
-            toast.setDuration(Toast.LENGTH_LONG);
-            toast.show();
+            String finalanswer = String.valueOf(answer);
 
+            Toast toast = Toast.makeText(this, "Your stage will have "+ finalanswer + "m/s of Delta V" , Toast.LENGTH_LONG);
+            toast.show();
         }
         catch(Exception e){
-            Toast error = new Toast(this);
-            error.setText("Please enter a valid set of values");
-            error.setDuration(Toast.LENGTH_SHORT);
+
+            Toast error = Toast.makeText(this, "Please enter a valid set of values", Toast.LENGTH_SHORT);
             error.show();
+
         }
 
     }
