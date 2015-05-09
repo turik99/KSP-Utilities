@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     Integer[] imgid={
             R.drawable.dvcalc,
             R.drawable.paracalc,
-            R.drawable.celstinfo
+            R.drawable.celestinfo
 
     };
     @Override

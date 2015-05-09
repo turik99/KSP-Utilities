@@ -20,6 +20,14 @@
             android:name=".CustomListAdapter"
             android:label="@string/title_activity_custom_list_adapter" >
         </activity>
+        <activity
+            android:name=".deltacalc"
+            android:label="@string/title_activity_deltacalc"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.android.eric.kerbal.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
