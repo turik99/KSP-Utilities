@@ -38,7 +38,6 @@ import android.widget.TextView;
 
             txtTitle.setText(itemname[position]);
             imageView.setImageResource(imgid[position]);
-            extratxt.setText("Description " + itemname[position]);
             return rowView;
 
         }
