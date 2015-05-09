@@ -11,13 +11,13 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     ListView list;
     String[] itemname ={
-            "Delta V Calculator",
+
             "Parachute Calculator",
             "Celestial Body Info"
     };
 
     Integer[] imgid={
-            R.drawable.dvcalc,
+
             R.drawable.paracalc,
             R.drawable.celestinfo
 
