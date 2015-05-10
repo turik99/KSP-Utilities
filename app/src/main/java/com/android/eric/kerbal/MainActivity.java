@@ -14,14 +14,16 @@ public class MainActivity extends AppCompatActivity {
     String[] itemname ={
             "Delta V Calculator",
             "Parachute Calculator",
-            "Celestial Body Info"
+            "Celestial Body Info",
+            "Kerbal Dev Blog"
+
     };
 
     Integer[] imgid={
             R.drawable.dvcalc,
             R.drawable.paracalc,
-            R.drawable.celestinfo
-
+            R.drawable.celestinfo,
+            R.drawable.devblog
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
