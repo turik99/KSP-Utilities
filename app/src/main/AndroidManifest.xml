@@ -28,6 +28,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.android.eric.kerbal.MainActivity" />
         </activity>
+        <activity
+            android:name=".paracalc"
+            android:label="@string/title_activity_paracalc"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.android.eric.kerbal.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

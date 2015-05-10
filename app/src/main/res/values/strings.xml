@@ -5,4 +5,19 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_custom_list_adapter">CustomListAdapter</string>
     <string name="title_activity_deltacalc">Delta V Calculator</string>
+    <string name="title_activity_paracalc">Parachute Calculator</string>
+    <string-array name="numbersarray">
+        <item>"x0"</item>
+        <item>"x1"</item>
+        <item>"x2"</item>
+        <item>"x3"</item>
+        <item>"x4"</item>
+        <item>"x5"</item>
+    </string-array>
+    <string-array name="planetsarray">
+        <item>"Kerbin"</item>
+        <item>"Duna"</item>
+        <item>"Laythe"</item>
+        <item>"Eve"</item>
+    </string-array>
 </resources>

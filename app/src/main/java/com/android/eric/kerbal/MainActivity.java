@@ -43,12 +43,13 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), deltacalc.class);
                     startActivity(intent);
                 }
+                if (position == 1){
+                    Intent intent = new Intent(getApplicationContext(), paracalc.class);
+                    startActivity(intent);
+                }
 
             }
         });
     }
-
-
-
 
 }
