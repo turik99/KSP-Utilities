@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                // TODO Auto-generated method stub
                 if (position == 0){
                     Intent intent = new Intent(getApplicationContext(), deltacalc.class);
                     startActivity(intent);
