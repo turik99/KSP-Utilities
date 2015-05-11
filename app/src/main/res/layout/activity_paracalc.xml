@@ -1,116 +1,23 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.android.eric.kerbal.paracalc">
+    tools:context="com.android.eric.kerbal.paracalc"
+    android:orientation="vertical">
 
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/planetspinner"
-        android:spinnerMode="dropdown"
-        android:layout_alignParentTop="true" />
+        android:spinnerMode="dropdown" />
 
     <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/mk16xlspinner"
-        android:layout_below="@+id/planetspinner"
-        android:spinnerMode="dropdown"
-        android:layout_toEndOf="@+id/imageView" />
 
-    <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/mk16spinner"
-        android:spinnerMode="dropdown"
-        android:layout_alignTop="@+id/imageView2"
-        android:layout_toEndOf="@+id/imageView2" />
+        android:spinnerMode="dropdown" />
 
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/mk25spinner"
-        android:spinnerMode="dropdown"
-        android:layout_below="@+id/textView2"
-        android:layout_toEndOf="@+id/imageView3" />
-
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/mk2spinner"
-        android:spinnerMode="dropdown"
-        android:layout_below="@+id/textView3"
-        android:layout_alignStart="@+id/textView3" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CALCULATE"
-        android:onClick="paracalc"
-        android:id="@+id/paracalcbutton"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:layout_alignTop="@+id/mk16xlspinner"
-        android:layout_alignParentStart="true"
-        android:src="@drawable/mk16xlsmall" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView2"
-        android:src="@drawable/mk16small"
-        android:layout_below="@+id/textView"
-        android:layout_toStartOf="@+id/textView" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView3"
-        android:src="@drawable/mk25small"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentStart="true" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView4"
-        android:src="@drawable/mk2small"
-        android:layout_below="@+id/textView3"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Mk-16 XL"
-        android:id="@+id/textView"
-        android:layout_below="@+id/mk16xlspinner"
-        android:layout_toEndOf="@+id/imageView" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Mk-16"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/mk16spinner"
-        android:layout_toEndOf="@+id/imageView2" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Mk-25 Drogue"
-        android:id="@+id/textView3"
-        android:layout_below="@+id/mk25spinner"
-        android:layout_toEndOf="@+id/imageView3" />
-
-</RelativeLayout>
+</LinearLayout>
