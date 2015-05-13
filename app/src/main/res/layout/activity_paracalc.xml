@@ -8,16 +8,40 @@
     android:orientation="vertical">
 
     <Spinner
+        android:minHeight="55dp"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/planetspinner"
         android:spinnerMode="dropdown" />
 
     <Spinner
-
+        android:minHeight="55dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/mk16spinner"
+        android:spinnerMode="dropdown" />
+
+    <Spinner
+        android:minHeight="55dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mk16xlspinner"
+        android:spinnerMode="dropdown" />
+
+    <Spinner
+        android:minHeight="55dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mk25spinner"
+        android:spinnerMode="dropdown" />
+
+    <Spinner
+        android:minHeight="55dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mk2spinner"
+        android:layout_gravity="center_horizontal"
         android:spinnerMode="dropdown" />
 
 </LinearLayout>
