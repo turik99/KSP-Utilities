@@ -8,7 +8,7 @@
     android:orientation="vertical">
 
     <Spinner
-        android:minHeight="55dp"
+        android:minHeight="50dp"
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,28 +16,28 @@
         android:spinnerMode="dropdown" />
 
     <Spinner
-        android:minHeight="55dp"
+        android:minHeight="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/mk16spinner"
         android:spinnerMode="dropdown" />
 
     <Spinner
-        android:minHeight="55dp"
-        android:layout_width="match_parent"
+        android:minHeight="50dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/mk16xlspinner"
         android:spinnerMode="dropdown" />
 
     <Spinner
-        android:minHeight="55dp"
+        android:minHeight="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/mk25spinner"
         android:spinnerMode="dropdown" />
 
     <Spinner
-        android:minHeight="55dp"
+        android:minHeight="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/mk2spinner"
