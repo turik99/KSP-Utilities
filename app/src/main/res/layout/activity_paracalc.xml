@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -13,28 +13,36 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/planetspinner"
-        android:spinnerMode="dropdown" />
+        android:spinnerMode="dropdown"
+        android:layout_alignParentStart="true" />
 
     <Spinner
         android:minHeight="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/mk16spinner"
-        android:spinnerMode="dropdown" />
+        android:spinnerMode="dropdown"
+        android:layout_below="@+id/mk2spinner"
+        android:layout_alignParentStart="true" />
 
     <Spinner
         android:minHeight="50dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/mk16xlspinner"
-        android:spinnerMode="dropdown" />
+        android:spinnerMode="dropdown"
+        android:layout_below="@+id/mk16spinner"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
     <Spinner
         android:minHeight="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/mk25spinner"
-        android:spinnerMode="dropdown" />
+        android:spinnerMode="dropdown"
+        android:layout_below="@+id/mk16xlspinner"
+        android:layout_alignParentStart="true" />
 
     <Spinner
         android:minHeight="50dp"
@@ -42,6 +50,48 @@
         android:layout_height="wrap_content"
         android:id="@+id/mk2spinner"
         android:layout_gravity="center_horizontal"
-        android:spinnerMode="dropdown" />
+        android:spinnerMode="dropdown"
+        android:layout_below="@+id/planetspinner"
+        android:layout_alignParentEnd="true" />
 
-</LinearLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:src="@drawable/mk25"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/mk25spinner"
+        android:layout_below="@+id/mk16xlspinner"
+        android:layout_alignEnd="@+id/mk16xlspinner" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:layout_below="@+id/planetspinner"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/mk2"
+        android:layout_above="@+id/mk16spinner"
+        android:layout_alignEnd="@+id/planetspinner" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:layout_below="@+id/mk2spinner"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/mk16"
+        android:layout_alignEnd="@+id/mk16spinner"
+        android:layout_above="@+id/mk16xlspinner" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView4"
+        android:layout_below="@+id/mk16spinner"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/mk16xl"
+        android:layout_above="@+id/mk25spinner"
+        android:layout_alignEnd="@+id/mk16xlspinner" />
+
+</RelativeLayout>
