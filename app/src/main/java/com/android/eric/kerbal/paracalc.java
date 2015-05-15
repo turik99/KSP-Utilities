@@ -81,8 +81,23 @@ public class paracalc extends AppCompatActivity implements AdapterView.OnItemSel
                 int planet = 1;
             }
         }
-        else if(spinner.getId() == R.id.mk16spinner){
+        if(spinner.getId() == R.id.mk16spinner){
+            if (position == 0){
+                int mk16paracount = 1;
+            }
+            if (position == 1){
+                int mk16paracount = 2;
 
+            }
+            if (position == 2){
+                int mk16paracount = 3;
+            }
+            if (position == 3){
+                int mk16paracount = 4;
+            }
+            else{
+                int mk16paracount = 5;
+            }
        }
     }
 
