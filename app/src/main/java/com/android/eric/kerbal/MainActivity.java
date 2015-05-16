@@ -47,9 +47,7 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), paracalc.class);
                     startActivity(intent);
                 }
-                if (position == 2){
 
-                }
 
             }
         });
