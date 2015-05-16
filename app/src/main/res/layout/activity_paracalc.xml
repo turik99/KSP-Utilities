@@ -106,7 +106,7 @@
         android:layout_alignParentEnd="true" />
 
     <Button
-
+        android:onClick="paracalced"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CALCULATE SPEED"

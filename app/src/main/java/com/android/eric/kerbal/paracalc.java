@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 
 public class paracalc extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
@@ -161,11 +162,21 @@ public class paracalc extends AppCompatActivity implements AdapterView.OnItemSel
                 int mk2paracount = 4;
             }
             else{
+
                 int mk2paracount = 5;
+
             }
+
         }
     }
+    String answ = "10";
 
+    public void paracalced(View view){
+        Toast paratoast = Toast.makeText(getApplicationContext(), answ, Toast.LENGTH_SHORT);
+        paratoast.show();
+
+
+    }
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
