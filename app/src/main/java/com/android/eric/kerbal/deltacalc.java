@@ -27,7 +27,7 @@ public class deltacalc extends AppCompatActivity {
             double fullmass = Double.valueOf(fulledit.getText().toString());
             double drymass = Double.valueOf(dryedit.getText().toString());
             double isp = Double.valueOf(ispedit.getText().toString());
-            double answer = Math.log(fullmass / drymass) * isp * 9.81 *10000/10000;
+            double answer = Math.log(fullmass / drymass) * isp * 9.81;
             Math.round(answer);
             String finalanswer = String.valueOf(answer);
 
