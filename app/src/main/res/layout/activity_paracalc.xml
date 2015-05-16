@@ -95,6 +95,7 @@
         android:layout_alignEnd="@+id/mk16xlspinner" />
 
     <EditText
+        android:hint="Lander Weight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
@@ -105,6 +106,7 @@
         android:layout_alignParentEnd="true" />
 
     <Button
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CALCULATE SPEED"
