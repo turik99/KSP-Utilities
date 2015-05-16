@@ -78,7 +78,18 @@ public class paracalc extends AppCompatActivity implements AdapterView.OnItemSel
         Spinner spinner = (Spinner) parent;
         if (spinner.getId() == R.id.planetspinner){
             if (position == 0){
-                int planet = 1;
+                String planet = "Kerbin";
+
+            }
+            if (position == 1){
+                String planet = "Duna";
+
+            }
+            if (position == 2){
+                String planet = "Laythe";
+            }
+            if (position == 3){
+                String planet = "Eve";
             }
         }
         if(spinner.getId() == R.id.mk16spinner){
@@ -98,8 +109,63 @@ public class paracalc extends AppCompatActivity implements AdapterView.OnItemSel
             else{
                 int mk16paracount = 5;
             }
-       }
+        }
+        if (spinner.getId() == R.id.mk25spinner){
+            if (position == 0){
+                int mk25paracount = 1;
+            }
+            if (position == 1){
+                int mk25paracount = 2;
+
+            }
+            if (position == 2){
+                int mk25paracount = 3;
+            }
+            if (position == 3){
+                int mk25paracount = 4;
+            }
+            else{
+                int mk25paracount = 5;
+            }
+        }
+        if (spinner.getId() == R.id.mk16xlspinner){
+            if (position == 0){
+                int mk16xlparacount = 1;
+            }
+            if (position == 1){
+                int mk16xlparacount = 2;
+
+            }
+            if (position == 2){
+                int mk16xlparacount = 3;
+            }
+            if (position == 3){
+                int mk16xlparacount = 4;
+            }
+            else{
+                int mk16xlparacount = 5;
+            }
+        }
+        if (spinner.getId() == R.id.mk2spinner){
+            if (position == 0){
+                int mk2paracount = 1;
+            }
+            if (position == 1){
+                int mk2paracount = 2;
+
+            }
+            if (position == 2){
+                int mk2paracount = 3;
+            }
+            if (position == 3){
+                int mk2paracount = 4;
+            }
+            else{
+                int mk2paracount = 5;
+            }
+        }
     }
+
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {

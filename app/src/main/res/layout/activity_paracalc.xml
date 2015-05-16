@@ -94,4 +94,22 @@
         android:layout_above="@+id/mk25spinner"
         android:layout_alignEnd="@+id/mk16xlspinner" />
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:layout_below="@+id/mk25spinner"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CALCULATE SPEED"
+        android:id="@+id/button"
+        android:layout_below="@+id/editText"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
