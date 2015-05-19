@@ -100,10 +100,9 @@
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/weightedit"
         android:layout_below="@+id/mk25spinner"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignStart="@+id/editText" />
 
     <Button
         android:onClick="paracalced"
@@ -111,7 +110,17 @@
         android:layout_height="wrap_content"
         android:text="CALCULATE SPEED"
         android:id="@+id/button"
-        android:layout_below="@+id/editText"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:hint="Landing Site Height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:layout_below="@+id/weightedit"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

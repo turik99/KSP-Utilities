@@ -5,11 +5,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 
 public class paracalc extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+
+
+
+    String planet;
+    int mk2paracount;
+    int mk16paracount;
+    int mk16xlparacount;
+    int mk25paracount;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,91 +91,91 @@ public class paracalc extends AppCompatActivity implements AdapterView.OnItemSel
         Spinner spinner = (Spinner) parent;
         if (spinner.getId() == R.id.planetspinner){
             if (position == 0){
-                String planet = "Kerbin";
+                planet = "Kerbin";
 
             }
             if (position == 1){
-                String planet = "Duna";
+                planet = "Duna";
 
             }
             if (position == 2){
-                String planet = "Laythe";
+                planet = "Laythe";
             }
             if (position == 3){
-                String planet = "Eve";
+                planet = "Eve";
             }
         }
         if(spinner.getId() == R.id.mk16spinner){
             if (position == 0){
-                int mk16paracount = 1;
+                mk16paracount = 1;
             }
             if (position == 1){
-                int mk16paracount = 2;
+                mk16paracount = 2;
 
             }
             if (position == 2){
-                int mk16paracount = 3;
+                mk16paracount = 3;
             }
             if (position == 3){
-                int mk16paracount = 4;
+                mk16paracount = 4;
             }
-            else{
-                int mk16paracount = 5;
+            if (position == 4){
+                mk16paracount = 5;
             }
         }
         if (spinner.getId() == R.id.mk25spinner){
             if (position == 0){
-                int mk25paracount = 1;
+                mk25paracount = 1;
             }
             if (position == 1){
-                int mk25paracount = 2;
+                mk25paracount = 2;
 
             }
             if (position == 2){
-                int mk25paracount = 3;
+                mk25paracount = 3;
             }
             if (position == 3){
-                int mk25paracount = 4;
+                mk25paracount = 4;
             }
-            else{
-                int mk25paracount = 5;
+            if (position == 4){
+                mk25paracount = 5;
             }
         }
         if (spinner.getId() == R.id.mk16xlspinner){
             if (position == 0){
-                int mk16xlparacount = 1;
+                mk16xlparacount = 1;
             }
             if (position == 1){
-                int mk16xlparacount = 2;
+                mk16xlparacount = 2;
 
             }
             if (position == 2){
-                int mk16xlparacount = 3;
+                mk16xlparacount = 3;
             }
             if (position == 3){
-                int mk16xlparacount = 4;
+                mk16xlparacount = 4;
             }
-            else{
-                int mk16xlparacount = 5;
+            if (position == 4){
+                mk16xlparacount = 5;
             }
         }
         if (spinner.getId() == R.id.mk2spinner){
             if (position == 0){
-                int mk2paracount = 1;
+                mk2paracount = 1;
             }
             if (position == 1){
-                int mk2paracount = 2;
+                mk2paracount = 2;
 
             }
             if (position == 2){
-                int mk2paracount = 3;
+                mk2paracount = 3;
             }
             if (position == 3){
-                int mk2paracount = 4;
+                mk2paracount = 4;
             }
-            else{
+            if (position == 4){
 
-                int mk2paracount = 5;
+                mk2paracount = 5;
 
             }
 
@@ -172,10 +184,32 @@ public class paracalc extends AppCompatActivity implements AdapterView.OnItemSel
     String answ = "10";
 
     public void paracalced(View view){
-        Toast paratoast = Toast.makeText(getApplicationContext(), answ, Toast.LENGTH_SHORT);
-        paratoast.show();
+        double dragcoefficient = mk16xlparacount*35.07;
+        EditText eweight = (EditText)findViewById(R.id.weightedit);
+
+        double gravityconstant  = Math.pow(6.674*10,-11);
+        double kerbinmass = Math.pow(5.291579*10,22);
+        double kerbinradiussquare = Math.pow(600000, 2);
+        double kerbinpressure = 1.2230948554874;
+        double weight = Double.valueOf(eweight.getText().toString());
 
 
+
+
+
+        try{
+
+
+            double finalspeed = Math.sqrt(weight*gravityconstant*kerbinmass/kerbinradiussquare*kerbinpressure*dragcoefficient);
+            Toast paratoast = Toast.makeText(getApplicationContext(), String.valueOf(finalspeed), Toast.LENGTH_SHORT);
+            paratoast.show();
+            Toast spinnertest = Toast.makeText(this, String.valueOf(mk25paracount), Toast.LENGTH_SHORT);
+            spinnertest.show();
+        }
+        catch (Exception e){
+            Toast paraerror = Toast.makeText(getApplicationContext(), "Please enter valid values", Toast.LENGTH_SHORT);
+            paraerror.show();
+        }
     }
 
     @Override
