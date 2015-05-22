@@ -186,21 +186,22 @@ public class paracalc extends AppCompatActivity implements AdapterView.OnItemSel
     public void paracalced(View view){
         double dragcoefficient = mk16xlparacount*35.07;
         EditText eweight = (EditText)findViewById(R.id.weightedit);
-
+        EditText ealtitude = (EditText)findViewById(R.id.altitude);
         double gravityconstant  = Math.pow(6.674*10,-11);
         double kerbinmass = Math.pow(5.291579*10,22);
         double kerbinradiussquare = Math.pow(600000, 2);
-        double kerbinpressure = 1.2230948554874;
+        double econstant = 271828183;
+        double kerbinpressurescaleheight = 5000;
         double weight = Double.valueOf(eweight.getText().toString());
-
+        double altitude = Double.valueOf(ealtitude.getText().toString());
+        double projectedArea =
 
 
 
 
         try{
 
-
-            double finalspeed = Math.sqrt(weight*gravityconstant*kerbinmass/kerbinradiussquare*kerbinpressure*dragcoefficient);
+            double finalspeed = Math.sqrt(2*(weight)*(9.81)/(1)*);
             Toast paratoast = Toast.makeText(getApplicationContext(), String.valueOf(finalspeed), Toast.LENGTH_SHORT);
             paratoast.show();
             Toast spinnertest = Toast.makeText(this, String.valueOf(mk25paracount), Toast.LENGTH_SHORT);
