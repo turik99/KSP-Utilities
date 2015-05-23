@@ -11,14 +11,11 @@ import android.widget.Toast;
 
 
 public class paracalc extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+    int mk16xlparacalc;
+    int mk2paracalc;
 
 
 
-    String planet;
-    int mk2paracount;
-    int mk16paracount;
-    int mk16xlparacount;
-    int mk25paracount;
 
 
 
@@ -86,125 +83,71 @@ public class paracalc extends AppCompatActivity implements AdapterView.OnItemSel
     }
 
 
-    @Override
+
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        Spinner spinner = (Spinner) parent;
-        if (spinner.getId() == R.id.planetspinner){
-            if (position == 0){
-                planet = "Kerbin";
+        int mk16xlparacount;
 
-            }
-            if (position == 1){
-                planet = "Duna";
+        switch (parent.getId()){
+            case R.id.mk16xlspinner:
+                switch (position){
+                    case 0:
+                        mk16xlparacount = 1;
+                        break;
 
-            }
-            if (position == 2){
-                planet = "Laythe";
-            }
-            if (position == 3){
-                planet = "Eve";
-            }
-        }
-        if(spinner.getId() == R.id.mk16spinner){
-            if (position == 0){
-                mk16paracount = 1;
-            }
-            if (position == 1){
-                mk16paracount = 2;
 
-            }
-            if (position == 2){
-                mk16paracount = 3;
-            }
-            if (position == 3){
-                mk16paracount = 4;
-            }
-            if (position == 4){
-                mk16paracount = 5;
-            }
-        }
-        if (spinner.getId() == R.id.mk25spinner){
-            if (position == 0){
-                mk25paracount = 1;
-            }
-            if (position == 1){
-                mk25paracount = 2;
+                    case 1:
+                        mk16xlparacount = 2;
+                        break;
 
-            }
-            if (position == 2){
-                mk25paracount = 3;
-            }
-            if (position == 3){
-                mk25paracount = 4;
-            }
-            if (position == 4){
-                mk25paracount = 5;
-            }
-        }
-        if (spinner.getId() == R.id.mk16xlspinner){
-            if (position == 0){
-                mk16xlparacount = 1;
-            }
-            if (position == 1){
-                mk16xlparacount = 2;
+                    case 2:
+                        mk16xlparacount = 3;
+                        break;
 
-            }
-            if (position == 2){
-                mk16xlparacount = 3;
-            }
-            if (position == 3){
-                mk16xlparacount = 4;
-            }
-            if (position == 4){
-                mk16xlparacount = 5;
-            }
-        }
-        if (spinner.getId() == R.id.mk2spinner){
-            if (position == 0){
-                mk2paracount = 1;
-            }
-            if (position == 1){
-                mk2paracount = 2;
+                    case 3:
 
-            }
-            if (position == 2){
-                mk2paracount = 3;
-            }
-            if (position == 3){
-                mk2paracount = 4;
-            }
-            if (position == 4){
+                        mk16xlparacount = 4;
 
-                mk2paracount = 5;
+                        break;
 
-            }
+                    case 4:
+                        mk16xlparacount = 5;
+                        break;
+
+
+                }
+                break;
+            case R.id.mk16spinner:
+                switch (position){
+
+                }
 
         }
     }
-    String answ = "10";
 
     public void paracalced(View view){
-        double dragcoefficient = mk16xlparacount*35.07;
-        EditText eweight = (EditText)findViewById(R.id.weightedit);
-        EditText ealtitude = (EditText)findViewById(R.id.altitude);
+
+
         double gravityconstant  = Math.pow(6.674*10,-11);
         double kerbinmass = Math.pow(5.291579*10,22);
         double kerbinradiussquare = Math.pow(600000, 2);
         double econstant = 271828183;
         double kerbinpressurescaleheight = 5000;
-        double weight = Double.valueOf(eweight.getText().toString());
-        double altitude = Double.valueOf(ealtitude.getText().toString());
-        double projectedArea =
+
+
 
 
 
 
         try{
+            EditText eweight = (EditText)findViewById(R.id.weightedit);
+            EditText ealtitude = (EditText)findViewById(R.id.altitude);
+            double weight = Double.valueOf(eweight.getText().toString());
+            double altitude = Double.valueOf(ealtitude.getText().toString());
 
-            double finalspeed = Math.sqrt(2*(weight)*(9.81)/(1)*);
+            double finalspeed = Math.sqrt(2*(weight)*(9.81)/(1));
             Toast paratoast = Toast.makeText(getApplicationContext(), String.valueOf(finalspeed), Toast.LENGTH_SHORT);
             paratoast.show();
-            Toast spinnertest = Toast.makeText(this, String.valueOf(mk25paracount), Toast.LENGTH_SHORT);
+            Toast spinnertest = Toast.makeText(this, String.valueOf(mk16xlparacalc), Toast.LENGTH_SHORT);
             spinnertest.show();
         }
         catch (Exception e){
