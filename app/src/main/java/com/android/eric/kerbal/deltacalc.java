@@ -28,7 +28,7 @@ public class deltacalc extends AppCompatActivity {
             double drymass = Double.valueOf(dryedit.getText().toString());
             double isp = Double.valueOf(ispedit.getText().toString());
             double answer = Math.log(fullmass / drymass) * isp * 9.81;
-            Math.round(answer);
+            Math.pow(answer, 2);
             String finalanswer = String.valueOf(answer);
 
             Toast toast = Toast.makeText(this, "Your stage will have "+ finalanswer + "m/s of Delta V" , Toast.LENGTH_LONG);
