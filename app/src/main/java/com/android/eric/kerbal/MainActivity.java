@@ -1,5 +1,6 @@
 package com.android.eric.kerbal;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,20 +11,19 @@ import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
+    Context c;
     ListView list;
     String[] itemname ={
             "Delta V Calculator",
             "Parachute Calculator",
             "Celestial Body Info",
-            "Kerbal Dev Blog"
 
     };
 
     Integer[] imgid={
             R.drawable.dvcalc,
             R.drawable.paracalc,
-            R.drawable.celestinfo,
-            R.drawable.devblog
+            R.drawable.celestinfo
     };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +47,11 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), paracalc.class);
                     startActivity(intent);
                 }
+                if (position == 2){
+                    Intent intent = new Intent(getApplicationContext(), infogridview.class);
+                    startActivity(intent);
+                }
+
 
 
             }
